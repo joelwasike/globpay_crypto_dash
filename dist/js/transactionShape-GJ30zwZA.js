@@ -1,0 +1,2 @@
+function n(t){if(!t)return t;const a={completed:"SUCCESS",pending:"PENDING",failed:"FAILED"},e=t.created_at?Math.floor(new Date(t.created_at).getTime()/1e3):0;return{...t,amount:t.amount??0,transaction_status:a[t.status]||(t.status||"").toUpperCase(),date_added:e,external_id:t.merchant_deposit_id||t.deposit_id,currency:t.asset||"USDT",source_of_funds:t.asset||"USDT"}}function s(t){return(t||[]).map(n)}export{s as t};
+//# sourceMappingURL=transactionShape-GJ30zwZA.js.map
